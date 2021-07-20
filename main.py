@@ -150,4 +150,4 @@ def mortgage_calculator():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
