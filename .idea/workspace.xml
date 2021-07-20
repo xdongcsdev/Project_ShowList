@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15e19fe6-c854-4811-bea4-6347c586cf32" name="Default Changelist" comment="comment register&#10;change secrets to projectList from main.py&#10;change secrets.html to projectlist.html">
+    <list default="true" id="15e19fe6-c854-4811-bea4-6347c586cf32" name="Default Changelist" comment="change static/image to static/img&#10;same as projectList.html path for mortgatecalculator.jpg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image/project_MortgageCalculator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/project_MortgageCalculator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projectList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projectList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626750526241</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change static/image to static/img&#10;same as projectList.html path for mortgatecalculator.jpg">
+      <created>1626752006460</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626752006460</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +154,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add gitignore" />
@@ -158,6 +164,7 @@
     <MESSAGE value="edit Procfile -&gt; spell check for gunicorn" />
     <MESSAGE value="delete file" />
     <MESSAGE value="comment register&#10;change secrets to projectList from main.py&#10;change secrets.html to projectlist.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment register&#10;change secrets to projectList from main.py&#10;change secrets.html to projectlist.html" />
+    <MESSAGE value="change static/image to static/img&#10;same as projectList.html path for mortgatecalculator.jpg" />
+    <option name="LAST_COMMIT_MESSAGE" value="change static/image to static/img&#10;same as projectList.html path for mortgatecalculator.jpg" />
   </component>
 </project>
