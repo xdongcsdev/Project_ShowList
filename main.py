@@ -34,7 +34,7 @@ class User(UserMixin, db.Model):
 @app.route("/")
 def home():
     if current_user.is_authenticated:
-        return redirect(url_for("secrets"))
+        return redirect(url_for("projectList"))
 
     return render_template("login.html", logged_in=current_user.is_authenticated)
 
@@ -42,7 +42,7 @@ def home():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('secrets'))
+        return redirect(url_for('projectList'))
 
     if request.method == "POST":
         email = request.form.get('email')
@@ -61,7 +61,7 @@ def login():
         # email exist and password correct
         else:
             login_user(user)
-            return redirect(url_for('secrets'))
+            return redirect(url_for('projectList'))
 
     return render_template("login.html", logged_in=current_user.is_authenticated)
 
@@ -95,10 +95,20 @@ def register():
 
         # login in and authenticate user after adding details to db
         login_user(new_user)
-        # then forward to page secrets
-        return redirect(url_for("secrets"))
+        # then forward to page projectList
+        return redirect(url_for("projectList"))
 
     return render_template("register.html", logged_in=current_user.is_authenticated)
+    
+    
+# test for login
+@app.route("/tlogin")
+def tlogin():
+    user = User.query.filter_by(email="raymond").first()
+    login_user(user)
+    return redirect(url_for("projectList"))    
+    
+    
 '''
 
 @app.route("/logout")
@@ -107,19 +117,11 @@ def logout():
     return redirect(url_for('home'))
 
 
-# test for login
-@app.route("/tlogin")
-def tlogin():
-    user = User.query.filter_by(email="raymond").first()
-    login_user(user)
-    return redirect(url_for("secrets"))
-
-
-@app.route("/secrets")
+@app.route("/projectList")
 @login_required
-def secrets():
+def projectList():
     print(current_user.name)
-    return render_template("secrets.html", name=current_user.name, logged_in=current_user.is_authenticated)
+    return render_template("projectList.html", name=current_user.name, logged_in=current_user.is_authenticated)
 
 
 # extra feature: Change password
